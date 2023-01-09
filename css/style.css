@@ -1,0 +1,52 @@
+img{
+    height: 250px;
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+    margin-top: 15px;
+}
+
+figure{
+    position: relative;
+    overflow: hidden;
+}
+figcaption{
+    --valuee: 10px;
+    position: absolute;
+    bottom: var(--valuee);
+    left: var(--valuee);
+    right: var(--valuee);
+    background-color: white;
+    transform: translateY( calc( 100% + var(--valuee) ) );
+    transition: 0.5s all;
+}
+figure:hover figcaption{
+    transform: translateY(0);
+}
+
+.layer{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.innerDiv{
+    width: 50%;
+    height: 450px;
+    margin: auto;
+    background-size: 100% 100%;
+}
+.innerDiv i{
+    cursor: pointer;
+}
+
+@media screen and (min-width : 750px) and (max-width : 990px) {
+    img{
+        height: 200px;
+    }
+}
